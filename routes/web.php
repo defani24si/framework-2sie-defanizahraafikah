@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\HomeController;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -20,3 +22,4 @@ Route::get('/nama/{param1?}/{nim?}', function ($param1 = '', $nim='') {
 Route::get('/about', function () {
     return view('halaman-about');
 });
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home.index');
