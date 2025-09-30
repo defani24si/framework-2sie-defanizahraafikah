@@ -10,7 +10,7 @@ Route::get('/', function () {
 Route::get('/pcr', function () {
     return 'Selamat Datang di Website Kampus PCR!';
 });
-Route::get('/mahasiswa/{param1}', [MahasiswaController ::class, 'show']
+Route::get('/mahasiswa1/{param1}', [MahasiswaController ::class, 'show']
 )->name('mahasiswa.show');
 
 Route::get('/nama/{param1}', function ($param1) {
