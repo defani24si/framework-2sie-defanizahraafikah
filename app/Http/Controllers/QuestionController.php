@@ -32,7 +32,7 @@ class QuestionController extends Controller
 		    'nama'  => 'required|max:20',
 		    'email' => ['required','email'],
 		    'pertanyaan' => 'required|max:300|min:8',
-        ],[
+    ],[
             'nama.required' => 'Nama tidak boleh kosong',
             'email.email' => 'Email tidak valid',
         ]);
@@ -41,7 +41,10 @@ class QuestionController extends Controller
         $data['email'] = $request->email ;
         $data['pertanyaan'] = $request->pertanyaan ;
 
-        return view('home-question-respon', $data) ;
+        // return view('home-question-respon', $data) ;
+        return redirect()->route('home')->with('info', 'Terimakasih atas pertanyaannya <b> '.$data['nama'].'</b>!
+         Silahkan cek email anda di <b>'.$data['email'].'</b>');
+
     }
 
     /**
