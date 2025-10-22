@@ -70,6 +70,7 @@
                         <span class="sidebar-text">Dashboard</span>
                     </a>
                 </li>
+                
                 <!-- Tambahkan blok kode ini -->
                 <li class="nav-item  active  {{ request()->routeIs('pelanggan.*') ? 'active' : '' }}">
                     <a href="{{route('pelanggan.index')}}" class="nav-link">

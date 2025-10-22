@@ -39,7 +39,7 @@
                                 <div class="col-lg-4 col-sm-6">
                                     <!-- Name -->
                                     <div class="mb-3">
-                                        <label for="name" class="form-label">Nama Lengkap</label>
+                                        <label for="name" class="form-label">Namaa Lengkap</label>
                                         <input name="name" type="text" id="name" class="form-control" required>
                                     </div>
 

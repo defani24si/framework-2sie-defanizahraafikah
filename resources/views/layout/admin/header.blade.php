@@ -19,6 +19,7 @@
                                     placeholder="Search" aria-label="Search" aria-describedby="topbar-addon">
                             </div>
                         </form>
+                        
                         <!-- / Search form -->
                     </div>
                     <!-- Navbar links -->
