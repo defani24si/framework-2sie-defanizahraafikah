@@ -12,7 +12,7 @@ class PelangganController extends Controller
     public function index()
     {
         $data['dataPelanggan'] = Pelanggan::all();
-        return view('admin.pelanggan.index', $data);
+		return view('admin.pelanggan.index',$data);
     }
 
     /**
@@ -83,6 +83,9 @@ class PelangganController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $pelanggan = Pelanggan::findOrFail($id);
+
+        $pelanggan->delete();
+        return redirect()->route('pelanggan.index')->with('success', 'Data berhasil dihapus');
     }
 }
