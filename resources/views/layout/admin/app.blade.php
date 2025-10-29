@@ -54,7 +54,13 @@
 {{-- Sart Header --}}
     @include('layout.admin.header')
 {{-- End Header --}}
-
+{{-- Pesan sukses --}}
+    @if(session('success'))
+        <div class="alert alert-success alert-dismissible fade show mx-3 my-3" role="alert">
+            {{ session('success') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
 {{-- Sart  Content --}}
         @yield('content')
 {{-- End Content --}}
