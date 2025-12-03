@@ -35,7 +35,7 @@ class UserController extends Controller
         $data['name'] = $request->name;
         $data['email']  = $request->email;
         $data['password']   = Hash::make($request->password);
-
+        $data['role']   = $request->role;
        User::create($data);
 
         return redirect()->route('user.index')->with('success', 'Penambahan Data Berhasil!');
